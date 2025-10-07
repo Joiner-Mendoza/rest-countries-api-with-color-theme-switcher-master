@@ -1,10 +1,13 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 5rem 0;
+  /* text-align: center; */
+  background-color: var(--background);
 }
-
+body{
+  background-color: var(--background);
+}
 .logo {
   height: 6em;
   padding: 1.5em;

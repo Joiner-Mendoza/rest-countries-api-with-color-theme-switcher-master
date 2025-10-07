@@ -1,0 +1,95 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-container {
+  background: #fff;
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 10px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.back-btn {
+  border: none;
+  background: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2rem;
+}
+
+.back-btn:hover {
+  background: #f2f2f2;
+}
+
+.modal-country {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.country-flag {
+  width: 45%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.country-info {
+  flex: 1;
+  color: #111517;
+}
+
+.country-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.info-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.info-columns p {
+  margin: 0.3rem 0;
+}
+
+.border-section {
+  margin-top: 1.5rem;
+}
+
+.border-btn {
+  background: #f1f1f1;
+  border: none;
+  padding: 0.4rem 1rem;
+  margin: 0.3rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.border-btn:hover {
+  background: #e2e2e2;
+}
+
+
+@media (max-width: 600px) {
+    
+.country-flag {
+    width: 100%;
+}
+
+}

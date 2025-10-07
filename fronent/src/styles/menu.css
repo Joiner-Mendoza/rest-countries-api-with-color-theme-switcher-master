@@ -1,0 +1,120 @@
+/* === Variables globales === */
+:root {
+  --elements: hsl(0, 0%, 100%);
+  --background: hsl(0, 0%, 98%);
+  --text: hsl(200, 15%, 8%);
+  --input: hsl(0, 0%, 52%);
+  --font-family: 'Nunito Sans', sans-serif;
+  --font-size-home: 14px;
+  --font-size-detail: 16px;
+  --transition: all 0.4s ease-in-out;
+}
+
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  list-style: none;
+  transition: var(--transition);
+}
+
+/* === Modo oscuro === */
+.dark-mode {
+  --elements: hsl(209, 23%, 22%);
+  --background: hsl(207, 26%, 17%);
+  --text: hsl(0, 0%, 100%);
+  --input: hsl(0, 0%, 52%);
+}
+
+/* === Estilos del menú === */
+.Main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--elements);
+  color: var(--text);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  padding: 1rem 2rem;
+  transition: var(--transition);
+}
+
+.Container_nav-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  width: 1160px;
+}
+
+.Container_nav-main-ul {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 1rem;
+  padding: 15px;
+  font-size: 60px;
+  margin-bottom: 0;
+  transition: var(--transition);
+}
+
+.Container_nav-main-ul li {
+  cursor: pointer;
+  font-weight: 800;
+  font-size: var(--font-size-home);
+  transition: var(--transition);
+}
+
+.Container_nav-main-ul li:hover {
+  transform: scale(1.1);
+  color: crimson;
+}
+
+.dark-toggle {
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 0.5rem;
+  margin-right: 15px;
+  font-size: var(--font-size-home);
+  transition: var(--transition);
+}
+
+.dark-toggle:hover {
+  color: crimson;
+  transform: scale(1.05);
+}
+
+/* === Responsive === */
+@media (max-width: 1127px) {
+  .dark-toggle { margin-right: 36px; }
+}
+
+@media (max-width: 1040px) {
+  .dark-toggle { justify-content: center; }
+}
+
+@media (max-width: 960px) {
+  .dark-toggle { justify-content: start; }
+}
+
+@media (max-width: 768px) {
+  .Main { padding: 1rem; }
+  .Container_nav-main { width: 100%; }
+  .dark-toggle { justify-content: end; }
+}
+
+@media (max-width: 550px) {
+  .search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 50px;
+  }
+  .filter-container { justify-content: start; }
+  .search-input { width: 230px; }
+}

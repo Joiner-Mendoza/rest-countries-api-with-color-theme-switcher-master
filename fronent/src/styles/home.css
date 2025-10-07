@@ -1,0 +1,129 @@
+.home {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--background);
+  transition: var(--transition);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+/* Oculta el scrollbar */
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Oculta el scrollbar en Firefox */
+.container {
+  scrollbar-width: none;
+  -ms-overflow-style: none; /* para IE y Edge antiguos */
+}
+
+
+/*  Barra de búsqueda y select */
+.search-form {
+  margin-bottom: 20px;
+  text-align: start;
+  margin-left: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  background-color: var(--background);
+  transition: var(--transition);
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.search-input:focus {
+  border-color: crimson;
+  transform: scale(1.02);
+}
+
+/*  Select de regiones */
+.filter-container {
+  display: flex;
+  justify-content: end;
+  background-color: var(--background);
+  transition: var(--transition);
+}
+
+.filter-container select {
+  border: none;
+  font-size: 15px;
+  padding: 10px 50px;
+  border-radius: 5px;
+  margin-right: 15px;
+  background-color: var(--elements);
+  color: var(--text);
+  transition: var(--transition);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-container select:hover {
+  border: 1px solid crimson;
+  transform: scale(1.02);
+}
+
+.filter-container select:focus {
+  outline: none;
+  border: 1px solid crimson;
+  color: crimson;
+  background-color: var(--background);
+}
+
+.filter-container select option {
+  background-color: var(--elements);
+  color: var(--text);
+  border-radius: 8px;
+}
+
+/* 💠 Grid de países */
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  background-color: var(--background);
+  transition: var(--transition);
+}
+
+/*  Responsivo */
+@media (max-width: 1024px) {
+  .country-grid { grid-template-columns: repeat(3, 1fr); }
+  .home { padding: 0; }
+  .search-form { width: 90%; transition: var(--transition); }
+}
+
+@media (max-width: 768px) {
+  .country-grid { grid-template-columns: repeat(2, 1fr); transition: var(--transition); }
+}
+
+@media (max-width: 480px) {
+  .country-grid { grid-template-columns: 1fr; transition: var(--transition); }
+}
+
+@media (max-width: 660px) {
+  .country-grid {
+    grid-template-columns: 1fr !important;
+    transition: var(--transition);
+  }
+  .card {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    transition: var(--transition);
+  }
+}
